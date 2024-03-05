@@ -1,16 +1,37 @@
+*{
+    box-sizing: border-box;
+}
 /* element selector */
 /* ref:colorhunt.co */
+/* mobile / hp */
 body {
     background-color: lightskyblue;
 }
+/* CSS Tablet */
+@media screen and (min-width: 600px) {
+    body{
+        background-color: yellow;
+    }
+    .col-sm-6{
+    width: 50%;
+    float: left;
 
-/* class selector */
-.col{
+    .col{
     width: 24%;
     background-color: brown;
     float: left;
     margin: 0 5px;
 }
+    }
+}
+/* CSS Dekstop */
+@media screen and (min-width: 992px) {
+    body{
+        background-color: green;
+    }
+}
+
+/* class selector */
 .img-responsive {
     width: 79%;
 }
