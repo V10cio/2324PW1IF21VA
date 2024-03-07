@@ -1,0 +1,14 @@
+body {
+    background-color: deeppink;
+}
+@media screen and (min-width: 600px) {
+    body {
+        background-color: yellow
+    }
+    .col-sm-6{
+        width: 50%;
+        float: left;
+    }
+
+};
+    
