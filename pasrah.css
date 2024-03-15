@@ -1,0 +1,27 @@
+body {
+    background-color: rgba(red, green, blue, alpha);
+}
+.itu {
+    background-color: blue ;
+}
+.h1 {
+    font-size: large;
+}
+.row ::after {
+    clear: both;
+}
+.tolol {
+    font: bolder;
+}
+.rounded{
+    border-radius: 20px;
+}
+.bg-judul{
+    background-color: cornsilk;
+}
+.text-center{
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
