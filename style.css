@@ -16,12 +16,6 @@ body {
     width: 50%;
     float: left;
 
-    .col{
-    width: 24%;
-    background-color: brown;
-    float: left;
-    margin: 0 5px;
-}
     }
 }
 /* CSS Dekstop */
@@ -29,6 +23,12 @@ body {
     body{
         background-color: green;
     }
+    .col{
+    width: 24%;
+    background-color: brown;
+    float: left;
+    margin: 0 5px;
+}
 }
 
 /* class selector */
