@@ -1,0 +1,1 @@
+document.getElementById("judul"),innerHTML = "JavaScript";
