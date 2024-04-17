@@ -5,27 +5,25 @@ fetch("https://dummyjson.com/products")
     console.log(data.total);
     console.log(data.products);
 
-    document.getElementById("Total").innerHTML = data.total;
+    document.getElementById("title").innerHTML = data.total;
     
     const productList = data.products;
 
-    for (const product of productList) {
-        const priceAfterDiscount = product.price * (1 - product.discountPercentage / 100);
-        const formattedPrice = priceAfterDiscount.toFixed(2);
-        const stockStatus = product.stock > 0 ? "In Stock" : "Out of Stock";
-
-        list.innerHTML += `<div class = "col-lg-6">
-            <div class = "row"
-                <img src="${product.thumbnail}" class="rounded d-block w-100">
+    for (const [i, d] of data.products.entries()) {
+        document.getElementById("Product"). innerHTML += `
+        <div class ="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6 p-2">
+                    <img src=${d.thumbnail} class="rounded d-block w-100"></img>
                 </div>
-                <div class = "col-lg-6 p-2" >
-                    <h2>${product.title}</h2>
-                    <br />Price: $${formattedPrice}
-                    <br />Discount: ${product.discountPercentage}
-                    <br />Stock: ${product.stock}
-                </div>        
-            </div>           
-        </div>`;
+                <div class="col-lg-6 p-2">
+                    <h2> ${d.title} </h1>
+                    <p> Description : ${d.description} </P>
+                    <p> price : ${d.price} </P>
+                    <p> Disc : ${d.discountPercentage} </P>
+                    <p> Stock : ${d.stock} </P>
+                </div>
+            </div>
+        </div>`
     }
 })
-.catch(error => console.error('Error fetching data:', error));
