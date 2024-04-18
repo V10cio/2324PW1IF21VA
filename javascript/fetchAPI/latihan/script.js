@@ -1,13 +1,10 @@
-fetch("https://dummyjson.com/products")
+fetch('https://dummyjson.com/products')
 .then(res => res.json())
-.then(data =>  {
-    console.log(data);
-    console.log(data.total);
-    console.log(data.products);
+.then(data => {
+    console.log(data)
+    console.log(data.products)
 
-    document.getElementById("title").innerHTML = data.total;
-    
-    const productList = data.products;
+    document.getElementById("title").innerHTML = data.total
 
     for (const [i, d] of data.products.entries()) {
         document.getElementById("Product"). innerHTML += `
@@ -19,7 +16,7 @@ fetch("https://dummyjson.com/products")
                 <div class="col-lg-6 p-2">
                     <h2> ${d.title} </h1>
                     <p> Description : ${d.description} </P>
-                    <p> price : ${d.price} </P>
+                    <p> Price : ${d.price} </P>
                     <p> Disc : ${d.discountPercentage} </P>
                     <p> Stock : ${d.stock} </P>
                 </div>
